@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Congreso COMENSUR — Registro</title>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <meta name="description" content="Formulario de inscripción al Congreso COMENSUR" />
+  <meta name="theme-color" content="#795548" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Congreso “COMENSUR”</h1>
+  </header>
+  <main id="main-content" class="site-main">
+    <h2>Datos personales</h2>
+    <form id="registroForm" aria-labelledby="datos-personales">
+      <fieldset>
+        <legend id="datos-personales" class="visually-hidden">Formulario de registro</legend>
+        <div class="form-group">
+          <label for="dni">DNI <span aria-hidden="true">*</span></label>
+          <input type="text" id="dni" name="dni" inputmode="numeric"
+                 maxlength="8" pattern="\d{8}" required
+                 aria-describedby="dni-help" />
+          <small id="dni-help" class="help">8 dígitos sin puntos</small>
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+        </div>
+        <div class="form-group">
+          <label for="edad">Edad <span aria-hidden="true">*</span></label>
+          <input type="number" id="edad" name="edad" min="17" max="99" required />
+        </div>
+        <div class="form-group">
+          <label for="sexo">Sexo <span aria-hidden="true">*</span></label>
+          <select id="sexo" name="sexo" required>
+            <option value="" disabled selected>Seleccione…</option>
+            <option value="mujer">Mujer</option>
+            <option value="hombre">Hombre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ocupacion">Ocupación <span aria-hidden="true">*</span></label>
+          <select id="ocupacion" name="ocupacion" required>
+            <option value="" disabled selected>Seleccione…</option>
+            <option value="estudiante_unjbg">Estudiante UNJBG</option>
+            <option value="estudiante_otra">Estudiante otra institución</option>
+            <option value="docente_unjbg">Docente UNJBG</option>
+            <option value="publico">Público general</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="celular">Celular <span aria-hidden="true">*</span></label>
+          <input type="tel" id="celular" name="celular" inputmode="tel"
+                 maxlength="9" pattern="\d{9}" required
+                 aria-describedby="cel-help" />
+          <small id="cel-help" class="help">9 dígitos, sin espacios</small>
+        </div>
+        <div class="form-group">
+          <label for="pago">Método de pago <span aria-hidden="true">*</span></label>
+          <select id="pago" name="pago" required>
+            <option value="" disabled selected>Seleccione…</option>
+            <option value="yape">Yape</option>
+            <option value="plin">Plin</option>
+            <option value="bbva">Entidad bancaria</option>
+            <option value="efectivo">Efectivo</option>
+            <option value="otros">Otros</option>
+          </select>
+        </div>
+      </fieldset>
+      <button type="submit" class="btn-registrar">Registrar</button>
+    </form>
+    <p id="form-status" class="sr-only" role="status" aria-live="polite"></p>
+  </main>
+  <footer class="site-footer">
+    <p>© 2025 COMENSUR — Todos los derechos reservados.</p>
+  </footer>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
