@@ -1,4 +1,4 @@
-const SCRIPT_URL = "https://script.google.com/macros/s/REEMPLAZA_CON_TU_URL/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwGG3tOPvFu_u3yK5_RwB5irLaMkU3jEluyPAK4eXBJq8wpdFlDwdqPVdaKeU8ipToi/exec";
 const form = document.getElementById("registroForm");
 const status = document.getElementById("form-status");
 
